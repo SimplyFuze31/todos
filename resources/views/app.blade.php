@@ -6,7 +6,7 @@
     @vite('resources/js/app.js')
     @inertiaHead
   </head>
-  <body>
+  <body class="mt-5">
     @inertia
   </body>
 </html>

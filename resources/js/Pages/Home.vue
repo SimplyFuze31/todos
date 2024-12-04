@@ -1,0 +1,20 @@
+<script setup>
+
+</script>
+
+<template>
+
+    <section class="container mx-auto  ">
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+            <div class="h-32 rounded-lg bg-gray-200"></div>
+            <div class="h-32 rounded-lg bg-gray-200"></div>
+            <div class="h-32 rounded-lg bg-gray-200"></div>
+        </div>
+    </section>
+
+
+</template>
+
+<style scoped>
+
+</style>
