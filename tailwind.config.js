@@ -13,7 +13,8 @@ export default {
         extend: {
             colors: {
                 background: '#4AA4C2',
-                primary : '#00171F',
+                primary : '#003747',
+                primaryHover: '#00171F',
             },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
