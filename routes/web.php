@@ -6,6 +6,6 @@ use Inertia\Inertia;
 use Nette\NotImplementedException;
 
 
-Route::get('/', [TaskController::class, 'index']);
+Route::get('/', [TaskController::class, 'index'])->name('task.index');
 
 Route::post('/', [TaskController::class, 'store'])->name('task.store');
