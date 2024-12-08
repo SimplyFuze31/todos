@@ -1,14 +1,13 @@
 <script setup>
 import {Inertia} from "@inertiajs/inertia";
 import {reactive} from "vue";
+const props = defineProps(['type']);
 const emit = defineEmits(['close']);
 let form = reactive({
     title: '',
-    type: '',
 })
 const addTask = () => {
-
-    Inertia.post("/", { title: form.title });
+    Inertia.post("/", { title: form.title, type: props.type });
     emit('close');
 };
 

@@ -1,8 +1,8 @@
 <script setup>
 
 import TaskList from "../Components/TaskList.vue";
-import { ref ,reactive } from 'vue';
-import {Inertia} from "@inertiajs/inertia";
+import { ref } from 'vue';
+
 const props = defineProps({
     tasks: {
         type: Array,
@@ -12,7 +12,6 @@ const props = defineProps({
 
 const tasks = ref([...props.tasks]);
 
-const isAddTask = ref(false);
 
 </script>
 

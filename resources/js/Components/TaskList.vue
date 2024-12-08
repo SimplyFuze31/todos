@@ -14,8 +14,8 @@ let showInput = () => {
 </script>
 
 <template>
-    <div class="px-8 min-h-72 h-auto rounded-lg border border-gray-600">
-        <nav class="pt-4 space-y-4">
+    <div class="px-8 py-4 min-h-72 h-auto rounded-lg border border-gray-600">
+        <nav class=" space-y-4">
             <div class="flex items-center justify-between  text-sm ">
                 <p class="mt-2 text-center text-2xl font-extrabold
                         tracking-wide">{{ title }}</p>
@@ -26,7 +26,7 @@ let showInput = () => {
                 </button>
             </div>
             <div class="pb-2">
-                <AddTaskForm v-if="isShowInput" @close="showInput"></AddTaskForm>
+                <AddTaskForm v-if="isShowInput" :type="title" @close="showInput"></AddTaskForm>
             </div>
         </nav>
         <div>

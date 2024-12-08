@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tasks', function (Blueprint $table) {
-            $table->id(); // Створює стовпець 'id' з автоінкрементом.
-            $table->string('title'); // Створює стовпець 'title' типу VARCHAR.
-            //$table->string('type'); // Створює стовпець 'type' типу VARCHAR.
-            //$table->timestamps(); // Створює стовпці 'created_at' та 'updated_at'.
+            $table->id();
+            $table->string('title');
+            $table->string('type');
+            $table->timestamps();
         });
     }
 

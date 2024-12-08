@@ -10,7 +10,6 @@ class Task extends Model
 {
     use HasFactory, Notifiable;
 
-    protected $fillable = ['title'];
+    protected $fillable = ['title', 'type'];
 
-    public $timestamps = false;
 }
