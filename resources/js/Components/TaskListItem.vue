@@ -1,11 +1,18 @@
 <script setup>
+import {Inertia} from "@inertiajs/inertia";
+
 defineProps(['task'])
+import {Link} from '@inertiajs/vue3'
+
+
 
 </script>
 
 <template>
     <li class="border border-gray-400 w-full px-4 py-2 rounded-md">
         <p>{{task.title}}</p>
+
+        <Link :href="`/destroy/${task.id}`" type="button" method="delete">Delete</Link>
     </li>
 </template>
 

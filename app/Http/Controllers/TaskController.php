@@ -30,4 +30,12 @@ class TaskController
 
     }
 
+    public function destroy(int $id){
+
+        Task::destroy($id);
+
+        return redirect('/');
+
+    }
+
 }
