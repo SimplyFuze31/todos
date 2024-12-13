@@ -33,7 +33,7 @@ let showInput = () => {
             </div>
         </nav>
         <div>
-            <ul class="flex flex-col w-full m-auto space-y-2">
+            <ul class="flex flex-col w-full m-auto space-y divide-y-2 divide-dashed divide-gray-600 ">
 
                 <TaskListItem v-for="task in tasks" :key="task.id"  :task=task></TaskListItem>
             </ul>

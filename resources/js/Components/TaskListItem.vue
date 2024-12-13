@@ -11,10 +11,13 @@ import {Link} from '@inertiajs/vue3'
 </script>
 
 <template>
-    <li class="border border-gray-400 w-full px-4 py-2 rounded-md">
+    <li class="flex justify-between  w-full px-4 py-2 ">
         <p>{{task.title}}</p>
 
-        <Link :href="`/destroy/${task.id}`" as="button" method="delete">Delete</Link>
+        <Link :href="`/destroy/${task.id}`"
+              as="button"
+              method="delete"
+              class="ms-2">Delete</Link>
     </li>
 </template>
 
