@@ -1,13 +1,18 @@
 <script setup>
 import {Inertia} from "@inertiajs/inertia";
 import {reactive} from "vue";
-const props = defineProps(['type']);
+import {useForm} from "@inertiajs/vue3";
+
+const props = defineProps({
+    type: String,
+});
 const emit = defineEmits(['close']);
-let form = reactive({
+let form = useForm({
     title: '',
+    type: props.type,
 })
 const addTask = () => {
-    Inertia.post("/", { title: form.title, type: props.type });
+    form.post('/store')
     emit('close');
 };
 

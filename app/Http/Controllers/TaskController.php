@@ -17,7 +17,7 @@ class TaskController
         return inertia('Home', ['tasks' => $tasks]);
     }
 
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'title' => 'required | max:255 | string',

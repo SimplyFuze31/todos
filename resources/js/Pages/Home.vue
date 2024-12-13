@@ -1,7 +1,6 @@
 <script setup>
 
 import TaskList from "../Components/TaskList.vue";
-import { ref } from 'vue';
 
 const props = defineProps({
     tasks: {
@@ -9,8 +8,6 @@ const props = defineProps({
         required: true
     }
 });
-
-const tasks = ref([...props.tasks]);
 
 
 </script>

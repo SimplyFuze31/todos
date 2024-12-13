@@ -3,7 +3,10 @@ import TaskListItem from "./TaskListItem.vue";
 import AddTaskForm from "./AddTaskForm.vue";
 import { ref } from 'vue';
 
-defineProps(['tasks', 'title'])
+const props = defineProps({
+    tasks: Array,
+    title: String,
+});
 
 const isShowInput = ref(false);
 let showInput = () => {
