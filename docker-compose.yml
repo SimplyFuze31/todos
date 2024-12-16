@@ -1,0 +1,29 @@
+services:
+  app:
+    container_name: laravel-app
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./src:/var/www
+    networks:
+      - app-network
+  vue:
+    build:
+      context: .
+      dockerfile: ./vue/Dockerfile
+    container_name: vue-app
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./src:/var/www
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
